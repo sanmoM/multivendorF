@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/custom.css" />
+  </head>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+  <body>
+    <header>
+      <!-- header 1 -->
+      <div
+        class="lg:flex max-w-7xl mx-auto hidden border-b justify-between font-medium items-center font- py-4 px-4 text-[12px]"
+      >
+        <div class="flex items-center space-x-3 text-gray-700">
+          <a href="#" class="hover:text-[#ff2631] transition duration-200"
+            >PLAY STORE</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a href="#" class="hover:text-[#ff2631] transition duration-200"
+            >APP STORE</a
+          >
+        </div>
+
+        <div class="flex items-center space-x-3 text-gray-700">
+          <a href="#" class="hover:text-[#ff2631] transition duration-200"
+            ><i class="fa-solid fa-truck text-red-600"></i> TRACK YOUR ORDER</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a href="#" class="hover:text-[#ff2631] transition duration-200">
+            <i class="fa-solid fa-code-compare text-red-600"></i>
+            COMPARE (0)</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a
+            href="/my_wishList.html"
+            class="hover:text-[#ff2631] transition duration-200"
+          >
+            <i class="fa-solid fa-heart text-red-600"></i>
+            WISHLIST (0)</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a
+            href="/cartPage.html"
+            class="hover:text-[#ff2631] transition duration-200"
+          >
+            <i class="fa-solid fa-cart-shopping text-red-600"></i>
+            CART (0)</a
+          >
+        </div>
+      </div>
+
+      <div class="py-6 max-w-7xl relative mx-auto w-ful lg:pb-0">
+        <!-- header2  -->
+        <div class="mx-4 relative flex items-center lg:justify-between">
+          <div class="flex items-center justify-center gap-16">
+            <div class="hidden lg:block">
+              <img
+                src="https://amazcart.ischooll.com/public/uploads/settings/65e061ef3822b.png"
+                alt=""
+                class="w-32 md:w-full"
+              />
+            </div>
+          </div>
+
+          <div class="mr-4 md:mr-6 lg:hidden">
+            <button id="menuBtn2">
+              <i class="fa-solid text-3xl fa-bars"></i>
+            </button>
+          </div>
+
+          <div
+            id="menuPanel"
+            class="absolute rounded-md top-16 bg-[#f4f1f7] -left-5 w-1/2 sm:w-[320px] md:w-2/5 lg:hidden shadow-xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+          >
+            <div class="p-4 pl-6 font-bold text-[14px]">
+              <ul class="space-y-2 font-medium">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contacts</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Auction</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="flex mr-8 lg:mr-0 items-center gap-3 w-[400px] border border-gray-200 rounded-full bg-[#f9f9fb] px-4 py-3"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.65 6.65a7.5 7.5 0 010 10.6z"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search your item"
+              class="ml-3 w-full bg-transparent outline-none text-gray-700 placeholder-gray-500"
+            />
+          </div>
+
+          <div class="lg:hidden absolute top-4 right-0 z-50">
+            <i class="fa-solid fa-bell text-xl text-gray-700"></i>
+          </div>
+
+          <div class="text-[14px] hidden lg:block font-medium">
+            <a
+              class="hover:text-[#ff2631] transition duration-200"
+              href="/login.html"
+            >
+              <i class="fa-solid fa-user text-red-600"></i>
+              LOGIN</a
+            ><span class="mx-1">/</span
+            ><a
+              class="hover:text-[#ff2631] transition duration-200"
+              href="/signUp.html"
+              >REGISTER</a
+            >
+          </div>
+        </div>
+        <!-- header3 -->
+        <div class="bg-[#f7f7fc] relative mx-4 mt-6 hidden lg:block pr-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <button
+                id="categoryBtn"
+                class="flex items-center px-4 py-3 bg-black text-white text-sm font-semibold rounded-sm"
+              >
+                <svg
+                  class="w-8 h-6 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+                All Categories
+                <svg
+                  class="w-4 h-6 ml-14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <nav
+                class="flex items-center space-x-6 ml-12 text-[15px] font-medium"
+              >
+                <a
+                  href="/index.html"
+                  class="hover:text-[#ff2631] transition duration-200"
+                  >Home</a
+                >
+                <a
+                  href="/shopPage.html"
+                  class="hover:text-[#ff2631] transition duration-200"
+                  >Shop</a
+                >
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >Blog</a
+                >
+
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >Contacts</a
+                >
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >About Us</a
+                >
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >Auction</a
+                >
+              </nav>
+            </div>
+
+            <div class="flex items-center space-x-6 text-[12px] font-medium">
+              <a
+                href="#"
+                class="flex items-center hover:text-[#ff2631] transition duration-200"
+              >
+                <svg
+                  class="w-4 h-4 mr-1 text-[#ff2631]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M18 9v6m3-3h-6M8 7a4 4 0 100 8 4 4 0 000-8zm0 8c-2.21 0-4 1.79-4 4v1h8v-1c0-2.21-1.79-4-4-4z"
+                  />
+                </svg>
+                New User Zone
+              </a>
+
+              <div class="h-5 w-px bg-gray-300"></div>
+
+              <a
+                href="#"
+                class="flex items-center hover:text-[#ff2631] transition duration-200"
+              >
+                <svg
+                  class="w-4 h-4 mr-1 text-[#ff2631]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5l2.12 4.3 4.77.7-3.45 3.36.81 4.73L12 16.6l-4.25 2.2.81-4.73-3.45-3.36 4.77-.7L12 4.5z"
+                  />
+                </svg>
+                Daily Deals
+              </a>
+            </div>
+          </div>
+          <div
+            id="categoryPanel"
+            class="hidden absolute top-12 left-0 w-[320px] h-[90vh] bg-[#f4f1f7] shadow-xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+          >
+            <div class="p-3 border-b">
+              <p>Category content goes here...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <div
+        class="fixed bottom-0 left-0 w-full h-20 bg-[#eeeef1] shadow-[0_-4px_12px_rgba(0,0,0,0.15)] z-40 lg:hidden"
+      >
+        <div
+          class="flex justify-between h-full items-center px-4 py-6 text-black text-xs relative"
+        >
+          <!-- Home -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/index.html"
+              ><i class="fa-solid text-[18px] fa-house"></i
+            ></a>
+            <span class="font-semibold text-base">Home</span>
+          </div>
+
+          <!-- Wishlist -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/my_wishList.html"
+              ><i class="fa-solid text-[18px] fa-heart"></i
+            ></a>
+            <span class="font-semibold text-base">Wishlist</span>
+          </div>
+
+          <!-- Spacer -->
+          <div class="w-16"></div>
+
+          <!-- Cart -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/cartPage.html"
+              ><i class="fa-solid text-[18px] fa-cart-shopping"></i
+            ></a>
+            <span class="font-semibold text-base">Cart</span>
+          </div>
+
+          <!-- Account -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/user_profile.html"
+              ><i class="fa-solid text-[18px] fa-user"></i
+            ></a>
+            <span class="font-semibold text-base">Account</span>
+          </div>
+
+          <!-- Floating Button -->
+          <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 z-50">
+            <div
+              class="bg-black shadow-xl flex justify-center items-center text-white font-bold text-4xl h-16 w-16 rounded-full"
+            >
+              e
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="max-w-7xl grid grid-cols-1 lg:grid-cols-3 lg:gap-10 container mx-auto md:px-4 px-2"
+    >
+      <div class="col-span-2">
+        <!-- Table Header -->
+        <div
+          class="py-3 md:py-4 px-3 md:px-6 border bg-[#fcfdfd] mt-6 rounded text-[10px] sm:text-xs md:text-sm font-semibold text-gray-600 grid grid-cols-5 md:grid-cols-6 items-center"
+        >
+          <h5 class="col-span-2">Item</h5>
+          <h5 class="text-center hidden md:block">Price</h5>
+          <h5 class="text-center">Quantity</h5>
+          <h5 class="text-center">Subtotal</h5>
+          <h5 class="text-center">Remove</h5>
+        </div>
+
+        <!-- Table Body -->
+        <div class="mt-2 space-y-3">
+          <!-- Product Row -->
+          <div
+            class="bg-white border rounded-md p-3 grid grid-cols-5 md:grid-cols-6 items-center text-[10px] sm:text-xs md:text-sm"
+          >
+            <!-- Item -->
+            <div class="col-span-2 flex gap-2 md:gap-4 items-center">
+              <img
+                class="w-10 h-10 object-cover rounded"
+                src="https://amazcart.ischooll.com/public/uploads/images/16-01-2023/63c4ebab0fcf9.jpeg"
+                alt="Product"
+              />
+              <h4 class="leading-tight font-semibold text-gray-700">
+                Minimalistic Living Room...
+              </h4>
+            </div>
+
+            <!-- Price (hidden on small devices) -->
+            <p class="text-center font-semibold hidden md:block">$105.00</p>
+
+            <!-- Quantity -->
+            <div class="flex justify-center items-center gap-2">
+              <button
+                class="w-5 h-5 flex items-center justify-center border rounded text-gray-600 hover:bg-gray-100"
+              >
+                -
+              </button>
+              <span class="w-5 text-center">1</span>
+              <button
+                class="w-5 h-5 flex items-center justify-center border rounded text-gray-600 hover:bg-gray-100"
+              >
+                +
+              </button>
+            </div>
+
+            <!-- Subtotal -->
+            <p class="text-center font-semibold text-gray-700">$105.00</p>
+
+            <!-- Remove -->
+            <button class="text-red-500 text-center hover:underline">✖</button>
+          </div>
+
+          <!-- Duplicate Product Row -->
+          <div
+            class="bg-white border rounded-md p-3 grid grid-cols-5 md:grid-cols-6 items-center text-[10px] sm:text-xs md:text-sm"
+          >
+            <div class="col-span-2 flex gap-2 md:gap-4 items-center">
+              <img
+                class="w-10 h-10 object-cover rounded"
+                src="https://amazcart.ischooll.com/public/uploads/images/16-01-2023/63c4ebab0fcf9.jpeg"
+                alt="Product"
+              />
+              <h4 class="leading-tight font-semibold text-gray-700">
+                Minimalistic Living Room...
+              </h4>
+            </div>
+            <p class="text-center font-semibold hidden md:block">$105.00</p>
+            <div class="flex justify-center items-center gap-2">
+              <button
+                class="w-5 h-5 flex items-center justify-center border rounded text-gray-600 hover:bg-gray-100"
+              >
+                -
+              </button>
+              <span class="w-5 text-center">1</span>
+              <button
+                class="w-5 h-5 flex items-center justify-center border rounded text-gray-600 hover:bg-gray-100"
+              >
+                +
+              </button>
+            </div>
+            <p class="text-center font-semibold text-gray-700">$105.00</p>
+            <button class="text-red-500 text-center hover:underline">✖</button>
+          </div>
+        </div>
+        <div class="mt-6 flex justify-between flex-wrap">
+          <a
+            class="text-black cursor-pointer hover:bg-black hover:text-white text-sm font-semibold py-3 px-6 rounded border border-black transition"
+          >
+            CONTINUE SHIPPING
+          </a>
+          <a
+            href="/checkOutPage.html"
+            class="bg-black cursor-pointer text-white hover:border hover:border-black text-sm font-semibold py-3 px-6 rounded hover:bg-white hover:text-black transition"
+          >
+            PROCEED TO CHECKOUT
+          </a>
+        </div>
+      </div>
+
+      <div class="col-span-1 mt-6 lg:mt-0 p-4">
+        <h2 class="text-lg font-bold text-gray-900 mb-4">Order Summary</h2>
+        <div class="space-y-3">
+          <div class="text-sm flex justify-between items-center">
+            <p>Subtotal</p>
+            <p class="text-gray-600">+$ 133.00</p>
+          </div>
+          <div class="text-sm flex justify-between items-center">
+            <div>
+              <p>Shipping Charge</p>
+              <p class="text-gray-600 text-[10px] font-light">
+                PACKAGE WISE SHIPPING CHANGE
+              </p>
+            </div>
+            <p class="text-gray-600">+$ 30.00</p>
+          </div>
+          <div class="text-sm flex justify-between items-center">
+            <p>Discount</p>
+            <p class="text-gray-600">+$ 2.00</p>
+          </div>
+          <div class="text-sm flex justify-between items-center">
+            <p>VAT/TAX/GST</p>
+            <p class="text-gray-600">+$ 5.00</p>
+          </div>
+          <hr />
+          <div class="flex justify-between items-center">
+            <p class="font-bold text-sm text-gray-500">TOTAL</p>
+            <p class="font-bold">$ 167.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer  -->
+    <footer class="bg-gray-950 pb-12 md:pb-0 mt-12">
+      <div
+        class="grid container mx-auto px-6 max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-14 md:pt-28 pb-8"
+      >
+        <div class="col-span-1 md:col-span-2 grid grid-cols-2 gap-4">
+          <ul class="text-[12px] md:text-[16px] space-y-1 font-normal text-white">
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >My Account</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Order Status</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Referral</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Coupons</a
+              >
+            </li>
+          </ul>
+          <ul class="text-[12px] md:text-[16px] space-y-1 font-normal text-white">
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >About us</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Help & Support</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Career</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Refund Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Store Buttons -->
+        <div
+          class="flex flex-row md:flex-col items-center md:items-start justify-center md:justify-start md:space-y-2 space-x-2 md:space-x-0"
+        >
+          <a
+            class="bg-[#ff2631] px-4 md:max-w-44 py-3 w-1/2 md:w-[80%] rounded-lg text-white"
+            href="#"
+          >
+            <div class="flex items-center gap-2">
+              <span>
+                <i class="fa-solid text-3xl fa-gamepad"></i>
+              </span>
+              <span>
+                <p class="text-[9px] md:text-[12px]">GET IT ON</p>
+                <span class="font-bold text-[11px] md:text-[14px]"
+                  >Google Play</span
+                >
+              </span>
+            </div>
+          </a>
+          <a
+            class="bg-[#ff2631] px-4 md:max-w-44 py-3 w-1/2 md:w-[80%] rounded-lg text-white"
+            href="#"
+          >
+            <div class="flex items-center gap-2">
+              <span>
+                <i class="fa-solid text-3xl fa-apple-whole"></i>
+              </span>
+              <span>
+                <p class="text-[9px] md:text-[12px]">GET IT ON</p>
+                <span class="font-bold text-[11px] md:text-[14px]"
+                  >Apple Store</span
+                >
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Estimate Subscription -->
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-xl md:text-[16px] mb-2 font-bold text-white">
+            GET TO KNOW PROJECT ESTIMATE?
+          </h3>
+          <input
+            placeholder="Enter email address"
+            class="bg-white px-4 text-[10px] md:text-[14px] mb-2 py-3 md:max-w-72 w-full rounded-lg border-none outline-none"
+            type="email"
+          />
+          <button
+            class="bg-[#ff2631] text-[9px] md:text-[14px] font-bold px-4 py-3 rounded-lg text-white md:max-w-72 w-full"
+          >
+            SUBSCRIBE
+          </button>
+        </div>
+      </div>
+
+      <p
+        class="text-white text-center text-[10px] md:text-[14px] border-gray-400 border-y font-normal py-6 lg:pb-6 pb-16"
+      >
+        Copyright © Amazcart 2025. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      const cateBtn = document.getElementById("categoryBtn");
+      const panel = document.getElementById("categoryPanel");
+
+      categoryBtn.addEventListener("click", () => {
+        const isOpen = !categoryPanel.classList.contains("translate-x-full");
+
+        if (isOpen) {
+          // Hide panel
+          categoryPanel.classList.add("translate-x-full");
+          setTimeout(() => {
+            categoryPanel.classList.add("hidden");
+          }, 300); // wait for slide-out
+        } else {
+          // Show panel
+          categoryPanel.classList.remove("hidden", "translate-x-full");
+          categoryPanel.classList.add("translate-x-0");
+        }
+      });
+
+      const openMenu = document.getElementById("menuBtn2");
+      const menupanel = document.getElementById("menuPanel");
+
+      openMenu.addEventListener("click", () => {
+        const isOpen = !menuPanel.classList.contains("-translate-x-full");
+        if (isOpen) {
+          menuPanel.classList.add("-translate-x-full");
+          setTimeout(() => {
+            menuPanel.classList.add("hidden");
+          }, 300);
+        } else {
+          menuPanel.classList.remove("hidden");
+          setTimeout(() => {
+            menuPanel.classList.remove("-translate-x-full");
+          }, 10);
+        }
+      });
+    </script>
+  </body>
+</html>

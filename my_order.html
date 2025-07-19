@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/custom.css" />
+  </head>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+  <body>
+    <!-- This is header section -->
+    <header>
+      <!-- header 1 -->
+      <div
+        class="lg:flex max-w-7xl mx-auto hidden border-b justify-between font-medium items-center font- py-4 px-4 text-[12px]"
+      >
+        <div class="flex items-center space-x-3 text-gray-700">
+          <a href="#" class="hover:text-[#ff2631] transition duration-200"
+            >PLAY STORE</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a href="#" class="hover:text-[#ff2631] transition duration-200"
+            >APP STORE</a
+          >
+        </div>
+
+        <div class="flex items-center space-x-3 text-gray-700">
+          <a href="#" class="hover:text-[#ff2631] transition duration-200"
+            ><i class="fa-solid fa-truck text-red-600"></i> TRACK YOUR ORDER</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a href="#" class="hover:text-[#ff2631] transition duration-200">
+            <i class="fa-solid fa-code-compare text-red-600"></i>
+            COMPARE (0)</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a
+            href="/my_wishList.html"
+            class="hover:text-[#ff2631] transition duration-200"
+          >
+            <i class="fa-solid fa-heart text-red-600"></i>
+            WISHLIST (0)</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a
+            href="/cartPage.html"
+            class="hover:text-[#ff2631] transition duration-200"
+          >
+            <i class="fa-solid fa-cart-shopping text-red-600"></i>
+            CART (0)</a
+          >
+        </div>
+      </div>
+
+      <div class="py-6 max-w-7xl relative mx-auto w-ful lg:pb-0">
+        <!-- header2  -->
+        <div class="mx-4 relative flex items-center lg:justify-between">
+          <div class="flex items-center justify-center gap-16">
+            <div class="hidden lg:block">
+              <img
+                src="https://amazcart.ischooll.com/public/uploads/settings/65e061ef3822b.png"
+                alt=""
+                class="w-32 md:w-full"
+              />
+            </div>
+          </div>
+
+          <div class="mr-4 md:mr-6 lg:hidden">
+            <button id="menuBtn2">
+              <i class="fa-solid text-3xl fa-bars"></i>
+            </button>
+          </div>
+
+          <div
+            id="menuPanel"
+            class="absolute rounded-md top-16 bg-[#f4f1f7] -left-5 w-1/2 sm:w-[320px] md:w-2/5 lg:hidden shadow-xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+          >
+            <div class="p-4 pl-6 font-bold text-[14px]">
+              <ul class="space-y-2 font-medium">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contacts</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Auction</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="flex mr-8 lg:mr-0 items-center gap-3 w-[400px] border border-gray-200 rounded-full bg-[#f9f9fb] px-4 py-3"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.65 6.65a7.5 7.5 0 010 10.6z"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search your item"
+              class="ml-3 w-full bg-transparent outline-none text-gray-700 placeholder-gray-500"
+            />
+          </div>
+
+          <div class="lg:hidden absolute top-4 right-0 z-50">
+            <i class="fa-solid fa-bell text-xl text-gray-700"></i>
+          </div>
+
+          <div class="text-[14px] hidden lg:block font-medium">
+            <a
+              class="hover:text-[#ff2631] transition duration-200"
+              href="/login.html"
+            >
+              <i class="fa-solid fa-user text-red-600"></i>
+              LOGIN</a
+            ><span class="mx-1">/</span
+            ><a
+              class="hover:text-[#ff2631] transition duration-200"
+              href="/signUp.html"
+              >REGISTER</a
+            >
+          </div>
+        </div>
+        <!-- header3 -->
+        <div class="bg-[#f7f7fc] relative mx-4 mt-6 hidden lg:block pr-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <button
+                id="categoryBtn"
+                class="flex items-center px-4 py-3 bg-black text-white text-sm font-semibold rounded-sm"
+              >
+                <svg
+                  class="w-8 h-6 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+                All Categories
+                <svg
+                  class="w-4 h-6 ml-14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <nav
+                class="flex items-center space-x-6 ml-12 text-[15px] font-medium"
+              >
+                <a
+                  href="/index.html"
+                  class="hover:text-[#ff2631] transition duration-200"
+                  >Home</a
+                >
+                <a
+                  href="/shopPage.html"
+                  class="hover:text-[#ff2631] transition duration-200"
+                  >Shop</a
+                >
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >Blog</a
+                >
+
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >Contacts</a
+                >
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >About Us</a
+                >
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >Auction</a
+                >
+              </nav>
+            </div>
+
+            <div class="flex items-center space-x-6 text-[12px] font-medium">
+              <a
+                href="#"
+                class="flex items-center hover:text-[#ff2631] transition duration-200"
+              >
+                <svg
+                  class="w-4 h-4 mr-1 text-[#ff2631]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M18 9v6m3-3h-6M8 7a4 4 0 100 8 4 4 0 000-8zm0 8c-2.21 0-4 1.79-4 4v1h8v-1c0-2.21-1.79-4-4-4z"
+                  />
+                </svg>
+                New User Zone
+              </a>
+
+              <div class="h-5 w-px bg-gray-300"></div>
+
+              <a
+                href="#"
+                class="flex items-center hover:text-[#ff2631] transition duration-200"
+              >
+                <svg
+                  class="w-4 h-4 mr-1 text-[#ff2631]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5l2.12 4.3 4.77.7-3.45 3.36.81 4.73L12 16.6l-4.25 2.2.81-4.73-3.45-3.36 4.77-.7L12 4.5z"
+                  />
+                </svg>
+                Daily Deals
+              </a>
+            </div>
+          </div>
+          <div
+            id="categoryPanel"
+            class="hidden absolute top-12 left-0 w-[320px] h-[90vh] bg-[#f4f1f7] shadow-xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+          >
+            <div class="p-3 border-b">
+              <p>Category content goes here...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <div
+        class="fixed bottom-0 left-0 w-full h-20 bg-[#eeeef1] shadow-[0_-4px_12px_rgba(0,0,0,0.15)] z-40 lg:hidden"
+      >
+        <div
+          class="flex justify-between h-full items-center px-4 py-6 text-black text-xs relative"
+        >
+          <!-- Home -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/index.html"
+              ><i class="fa-solid text-[18px] fa-house"></i
+            ></a>
+            <span class="font-semibold text-base">Home</span>
+          </div>
+
+          <!-- Wishlist -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/my_wishList.html"
+              ><i class="fa-solid text-[18px] fa-heart"></i
+            ></a>
+            <span class="font-semibold text-base">Wishlist</span>
+          </div>
+
+          <!-- Spacer -->
+          <div class="w-16"></div>
+
+          <!-- Cart -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/cartPage.html"
+              ><i class="fa-solid text-[18px] fa-cart-shopping"></i
+            ></a>
+            <span class="font-semibold text-base">Cart</span>
+          </div>
+
+          <!-- Account -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/user_profile.html"
+              ><i class="fa-solid text-[18px] fa-user"></i
+            ></a>
+            <span class="font-semibold text-base">Account</span>
+          </div>
+
+          <!-- Floating Button -->
+          <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 z-50">
+            <div
+              class="bg-black shadow-xl flex justify-center items-center text-white font-bold text-4xl h-16 w-16 rounded-full"
+            >
+              e
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Profile Dashboard Section Start -->
+    <!-- Filter Button -->
+    <div class="mx-auto px-5 overflow-hidden max-sm:block hidden">
+      <i
+        id="dashboardBtn"
+        class="fa-solid dash-filter text-[20px] fa-bars cursor-pointer"
+      ></i>
+
+      <div
+        id="dashboardContent"
+        class="my-5 bg-white w-[300px] absolute transition-all duration-300 -translate-x-full hidden left-0 p-5 rounded-md ease-in-out sm:hidden overflow-y-auto z-50"
+      >
+        <ul class="flex flex-col gap-5">
+          <li
+            class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+          >
+            <a href="/profile-dashboard.html">
+              <div class="flex gap-3 items-center">
+                <i class="fa-solid fa-table-columns text-[14px]"></i>
+                <p class="text-[14px] font-semibold">Dashboard</p>
+              </div>
+            </a>
+            <span class="inline-block h-4 border-r-2 border-r-red-600"></span>
+          </li>
+          <li
+            class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+          >
+            <a href="/purchase_history.html">
+              <div class="flex gap-3 items-center">
+                <i class="fa-solid fa-table-columns text-[14px]"></i>
+                <p class="text-[14px] font-semibold">Purchase History</p>
+              </div>
+            </a>
+            <span class="h-4 hidden border-r-2 border-r-red-600"></span>
+          </li>
+          <li
+            class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+          >
+            <a href="/my_wishList.html">
+              <div class="flex gap-3 items-center">
+                <i class="fa-solid fa-heart text-[14px]"></i>
+                <p class="text-[14px] font-semibold">My Wishlist</p>
+              </div>
+            </a>
+            <span class="h-4 hidden border-r-2 border-r-red-600"></span>
+          </li>
+          <li
+            class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+          >
+            <a href="/my_order.html">
+              <div class="flex gap-3 items-center">
+                <i class="fa-solid fa-star text-[14px]"></i>
+                <p class="text-[14px] font-semibold">My Order</p>
+              </div>
+            </a>
+            <span class="h-4 hidden border-r-2 border-r-red-600"></span>
+          </li>
+          <li
+            class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+          >
+            <a href="/user_profile.html">
+              <div class="flex gap-3 items-center">
+                <i class="fa-solid fa-circle-user text-[14px]"></i>
+                <p class="text-[14px] font-semibold">My Account</p>
+              </div>
+            </a>
+            <span class="h-4 hidden border-r-2 border-r-red-600"></span>
+          </li>
+        </ul>
+        <hr style="border: 1px solid #ccc; margin: 20px 10px" />
+
+        <ul class="flex flex-col gap-3">
+          <li
+            class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+          >
+            <div class="flex gap-3 items-center">
+              <i class="fa-solid text-[14px] fa-arrow-right-from-bracket"></i>
+              <p class="text-[14px] font-semibold">Logout</p>
+            </div>
+            <span class="h-4 hidden border-r-2 border-r-red-600"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Filter Button End -->
+    <div
+      class="flex mx-auto max-sm:flex-col max-md:flex-col justify-center gap-5 py-10 max-w-7xl max-sm:w-full"
+    >
+      <div class="lg:w-[500px] max-sm:w-full max-md:w-full gap-5 p-3">
+        <div class="p-5 rounded-md bg-white border">
+          <div class="p-5">
+            <div class="flex gap-3 flex-col items-center py-2">
+              <img
+                src="https://i.ibb.co/PzDTBmqf/g2juhlin4zfmrdjvbhen.webp"
+                class="w-[100px] h-[100px] rounded-full border border-gray-300"
+                alt="User Avatar"
+              />
+
+              <div class="text-center">
+                <h4 class="text-[16px]">Md Mamun Khan</h4>
+                <p class="text-[12px]">khan@mamun.com</p>
+
+                <div
+                  class="px-5 py-2 bg-black mt-1 rounded-md hover:text-black transition hover:bg-white duration-300 text-white flex items-center justify-center gap-2"
+                >
+                  <button class="text-[12px] flex items-center gap-2">
+                    <i class="fa-solid fa-pen-to-square text-sm"></i>
+                    Edit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-1">
+            <button
+              class="w-full text-[14px] rounded-md uppercase md:px-10 py-3 hover:text-black hover:bg-white bg-black text-white transition duration-300"
+            >
+              Convert As Seller
+            </button>
+          </div>
+        </div>
+        <div class="p-5 bg-white border rounded-md my-5 max-sm:hidden">
+          <ul class="flex flex-col gap-5">
+            <li
+              class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+            >
+              <a href="/profile-dashboard.html">
+                <div class="flex gap-3 items-center">
+                  <i class="fa-solid fa-table-columns text-[14px]"></i>
+                  <p class="text-[14px] font-semibold">Dashboard</p>
+                </div>
+              </a>
+              <span class="inline-block h-4 border-r-2 border-r-red-600"></span>
+            </li>
+            <li
+              class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+            >
+              <a href="/purchase_history.html">
+                <div class="flex gap-3 items-center">
+                  <i class="fa-solid fa-table-columns text-[14px]"></i>
+                  <p class="text-[14px] font-semibold">Purchase History</p>
+                </div>
+              </a>
+              <span class="h-4 hidden border-r-2 border-r-red-600"></span>
+            </li>
+            <li
+              class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+            >
+              <a href="/my_wishList.html">
+                <div class="flex gap-3 items-center">
+                  <i class="fa-solid fa-heart text-[14px]"></i>
+                  <p class="text-[14px] font-semibold">My Wishlist</p>
+                </div>
+              </a>
+              <span class="h-4 hidden border-r-2 border-r-red-600"></span>
+            </li>
+            <li
+              class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+            >
+              <a href="/my_order.html">
+                <div class="flex gap-3 items-center">
+                  <i class="fa-solid fa-star text-[14px]"></i>
+                  <p class="text-[14px] font-semibold">My Order</p>
+                </div>
+              </a>
+              <span class="h-4 hidden border-r-2 border-r-red-600"></span>
+            </li>
+
+            <li
+              class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+            >
+              <a href="/user_profile.html">
+                <div class="flex gap-3 items-center">
+                  <i class="fa-solid fa-circle-user text-[14px]"></i>
+                  <p class="text-[14px] font-semibold">My Account</p>
+                </div>
+              </a>
+              <span class="h-4 hidden border-r-2 border-r-red-600"></span>
+            </li>
+          </ul>
+          <hr style="border: 1px solid #ccc; margin: 20px 10px" />
+
+          <ul class="flex flex-col gap-3">
+            <li
+              class="flex items-center hover:text-red-600 transition duration-300 justify-between"
+            >
+              <div class="flex gap-3 items-center">
+                <i class="fa-solid text-[14px] fa-arrow-right-from-bracket"></i>
+                <p class="text-[14px] font-semibold">Logout</p>
+              </div>
+              <span class="h-4 hidden border-r-2 border-r-red-600"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full">
+        <!--Order History section -->
+        <div class="flex justify-between max-sm:flex-col m-4">
+          <div class="max-sm:gap-3">
+            <button
+              class="bg-black text-white px-5 mt-1 max-sm:py-2 py-3 duration-300 transition rounded-sm text-[16px] max-sm:text-[12px] font-bold hover:bg-white hover:text-black"
+            >
+              All
+            </button>
+            <button
+              class="hover:bg-black hover:text-white mt-1 max-sm:py-2 px-5 py-3 duration-300 transition rounded-sm text-[16px] max-sm:text-[12px] font-bold bg-white text-black"
+            >
+              To Pay
+            </button>
+            <button
+              class="hover:bg-black hover:text-white mt-1 max-sm:py-2 px-5 py-3 duration-300 transition rounded-sm text-[16px] max-sm:text-[12px] font-bold bg-white text-black"
+            >
+              To Ship
+            </button>
+            <button
+              class="hover:bg-black hover:text-white mt-1 px-5 max-sm:py-2 py-3 duration-300 transition rounded-sm text-[16px] max-sm:text-[12px] font-bold bg-white text-black"
+            >
+              To Receive
+            </button>
+          </div>
+
+          <div>
+            <select
+              class="px-5 max-sm:px-2 py-3 max-sm:text-[12px] rounded-sm outline-none"
+              name="purchase_history"
+              id="history"
+            >
+              <option class="max-sm:text-[12px]" value="all">
+                Select Orders
+              </option>
+              <option class="max-sm:text-[12px]" value="5_orders">
+                Last 5 Orders
+              </option>
+              <option class="max-sm:text-[12px]" value="10_orders">
+                Last 10 Orders
+              </option>
+              <option class="max-sm:text-[12px]" value="20_orders">
+                Last 20 Orders
+              </option>
+              <option class="max-sm:text-[12px]" value="30_orders">
+                Last 30 Orders
+              </option>
+            </select>
+          </div>
+        </div>
+        <!-- Order section -->
+
+        <div class="bg-white mx-5 my-5 rounded-sm">
+          <div class="border shadow-md w-full pb-5">
+            <div
+              class="grid gap-3 px-5 py-3 items-center grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-b border-spacing-2 border-dashed"
+            >
+              <div>
+                <div class="text-sm space-y-1">
+                  <h5 class="text-[14px] max-sm:text-[12px] font-medium">
+                    Order ID:
+                    <span class="font-normal text-gray-400"
+                      >20250623001113</span
+                    >
+                  </h5>
+                  <p class="text-[14px] max-sm:text-[12px]">
+                    Order Date:
+                    <span class="font-normal text-gray-400">2025-06-23</span>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div class="text-sm space-y-1">
+                  <h5 class="text-[14px] max-sm:text-[12px] font-medium">
+                    Status:
+                    <span class="font-normal text-green-400">Completed</span>
+                  </h5>
+                  <p class="text-[14px] max-sm:text-[12px]">
+                    Order Amount:
+                    <span class="font-normal text-gray-400">$1230.00</span>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div class="text-sm space-y-1">
+                  <h5 class="text-[14px] max-sm:text-[12px] font-medium">
+                    Paid By:
+                    <span class="font-normal text-gray-400">Card</span>
+                  </h5>
+                </div>
+              </div>
+              <div>
+                <div class="">
+                  <button
+                    class="text-black bg-gray-300 px-5 lg:py-3 max-sm:px-3 py-1 md:py-1 max-sm:mt-3 duration-300 transition rounded-sm lg:text-[16px] text-[12px] font-bold hover:bg-black hover:text-white"
+                  >
+                    Download Invoice
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- order item start-->
+            <div
+              class="mx-4 md:mx-5 flex sm:flex-wrap max-md:flex-row items-center justify-between max-sm:gap-2 gap-5 p-3 my-3 mb-5 border rounded-md"
+            >
+              <!-- Product Image + Name -->
+              <div
+                class="flex items-center gap-4 max-sm:gap-2 w-full sm:w-auto max-sm:flex-col"
+              >
+                <div
+                  class="w-[80px] h-[80px] flex items-center justify-center overflow-hidden rounded"
+                >
+                  <img
+                    src="https://amazcart.ischooll.com/public/uploads/images/15-12-2022/639abee15eef1.webp"
+                    alt="Product"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3
+                  class="text-[16px] max-md:hidden max-sm:text-[14px] font-semibold"
+                >
+                  ProductName
+                </h3>
+              </div>
+
+              <!-- Quantity & Amount -->
+              <div
+                class="flex gap-5 max-sm:text-[14px] w-full sm:w-auto max-sm:gap-1 max-sm:flex-col"
+              >
+                <h3
+                  class="text-[16px] md:hidden max-sm:text-[14px] font-semibold"
+                >
+                  ProductName
+                </h3>
+                <h3 class="font-medium">
+                  Qty: <span class="font-normal text-gray-400">2</span>
+                </h3>
+                <h5 class="font-medium">
+                  Amount: <span class="font-normal text-gray-400">$500</span>
+                </h5>
+              </div>
+            </div>
+            <div
+              class="mx-4 md:mx-5 flex sm:flex-wrap max-md:flex-row items-center justify-between max-sm:gap-2 gap-5 p-3 my-3 mb-5 border rounded-md"
+            >
+              <!-- Product Image + Name -->
+              <div
+                class="flex items-center gap-4 max-sm:gap-2 w-full sm:w-auto max-sm:flex-col"
+              >
+                <div
+                  class="w-[80px] h-[80px] flex items-center justify-center overflow-hidden rounded"
+                >
+                  <img
+                    src="https://amazcart.ischooll.com/public/uploads/images/15-12-2022/639abee15eef1.webp"
+                    alt="Product"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3
+                  class="text-[16px] max-md:hidden max-sm:text-[14px] font-semibold"
+                >
+                  ProductName
+                </h3>
+              </div>
+
+              <!-- Quantity & Amount -->
+              <div
+                class="flex gap-5 max-sm:text-[14px] w-full sm:w-auto max-sm:gap-1 max-sm:flex-col"
+              >
+                <h3
+                  class="text-[16px] md:hidden max-sm:text-[14px] font-semibold"
+                >
+                  ProductName
+                </h3>
+                <h3 class="font-medium">
+                  Qty: <span class="font-normal text-gray-400">2</span>
+                </h3>
+                <h5 class="font-medium">
+                  Amount: <span class="font-normal text-gray-400">$500</span>
+                </h5>
+              </div>
+            </div>
+            <div
+              class="mx-4 md:mx-5 flex sm:flex-wrap max-md:flex-row items-center justify-between max-sm:gap-2 gap-5 p-3 my-3 mb-5 border rounded-md"
+            >
+              <!-- Product Image + Name -->
+              <div
+                class="flex items-center gap-4 max-sm:gap-2 w-full sm:w-auto max-sm:flex-col"
+              >
+                <div
+                  class="w-[80px] h-[80px] flex items-center justify-center overflow-hidden rounded"
+                >
+                  <img
+                    src="https://amazcart.ischooll.com/public/uploads/images/15-12-2022/639abee15eef1.webp"
+                    alt="Product"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3
+                  class="text-[16px] max-md:hidden max-sm:text-[14px] font-semibold"
+                >
+                  ProductName
+                </h3>
+              </div>
+
+              <!-- Quantity & Amount -->
+              <div
+                class="flex gap-5 max-sm:text-[14px] w-full sm:w-auto max-sm:gap-1 max-sm:flex-col"
+              >
+                <h3
+                  class="text-[16px] md:hidden max-sm:text-[14px] font-semibold"
+                >
+                  ProductName
+                </h3>
+                <h3 class="font-medium">
+                  Qty: <span class="font-normal text-gray-400">2</span>
+                </h3>
+                <h5 class="font-medium">
+                  Amount: <span class="font-normal text-gray-400">$500</span>
+                </h5>
+              </div>
+            </div>
+            <div
+              class="mx-4 md:mx-5 flex sm:flex-wrap max-md:flex-row items-center justify-between max-sm:gap-2 gap-5 p-3 my-3 mb-5 border rounded-md"
+            >
+              <!-- Product Image + Name -->
+              <div
+                class="flex items-center gap-4 max-sm:gap-2 w-full sm:w-auto max-sm:flex-col"
+              >
+                <div
+                  class="w-[80px] h-[80px] flex items-center justify-center overflow-hidden rounded"
+                >
+                  <img
+                    src="https://amazcart.ischooll.com/public/uploads/images/15-12-2022/639abee15eef1.webp"
+                    alt="Product"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3
+                  class="text-[16px] max-md:hidden max-sm:text-[14px] font-semibold"
+                >
+                  ProductName
+                </h3>
+              </div>
+
+              <!-- Quantity & Amount -->
+              <div
+                class="flex gap-5 max-sm:text-[14px] w-full sm:w-auto max-sm:gap-1 max-sm:flex-col"
+              >
+                <h3
+                  class="text-[16px] md:hidden max-sm:text-[14px] font-semibold"
+                >
+                  ProductName
+                </h3>
+                <h3 class="font-medium">
+                  Qty: <span class="font-normal text-gray-400">2</span>
+                </h3>
+                <h5 class="font-medium">
+                  Amount: <span class="font-normal text-gray-400">$500</span>
+                </h5>
+              </div>
+            </div>
+            <div
+              class="mx-4 md:mx-5 flex sm:flex-wrap max-md:flex-row items-center justify-between max-sm:gap-2 gap-5 p-3 my-3 mb-5 border rounded-md"
+            >
+              <!-- Product Image + Name -->
+              <div
+                class="flex items-center gap-4 max-sm:gap-2 w-full sm:w-auto max-sm:flex-col"
+              >
+                <div
+                  class="w-[80px] h-[80px] flex items-center justify-center overflow-hidden rounded"
+                >
+                  <img
+                    src="https://amazcart.ischooll.com/public/uploads/images/15-12-2022/639abee15eef1.webp"
+                    alt="Product"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3
+                  class="text-[16px] max-md:hidden max-sm:text-[14px] font-semibold"
+                >
+                  ProductName
+                </h3>
+              </div>
+
+              <!-- Quantity & Amount -->
+              <div
+                class="flex gap-5 max-sm:text-[14px] w-full sm:w-auto max-sm:gap-1 max-sm:flex-col"
+              >
+                <h3
+                  class="text-[16px] md:hidden max-sm:text-[14px] font-semibold"
+                >
+                  ProductName
+                </h3>
+                <h3 class="font-medium">
+                  Qty: <span class="font-normal text-gray-400">2</span>
+                </h3>
+                <h5 class="font-medium">
+                  Amount: <span class="font-normal text-gray-400">$500</span>
+                </h5>
+              </div>
+            </div>
+
+            <!-- order item end -->
+            <div class="flex justify-end max-sm:justify-start gap-5 mx-5">
+              <div class="">
+                <button
+                  class="text-white bg-black max-sm:px-3 px-5 py-3 max-sm:mt-3 duration-300 transition rounded-sm text-[16px] max-sm:text-[12px] font-bold hover:bg-white hover:text-black"
+                >
+                  Order Details
+                </button>
+              </div>
+              <!-- <div class="">
+                  <button
+                    class="text-black bg-gray-300 max-sm:px-3 px-5 py-3 max-sm:mt-3 duration-300 transition rounded-sm text-[16px] max-sm:text-[12px] font-bold hover:bg-red-500 hover:text-white"
+                  >
+                    Cancel Order
+                  </button>
+                </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination start -->
+        <div class="flex items-center justify-center gap-2 flex-wrap py-5">
+          <!-- Prev Button -->
+          <button class="px-4 py-2 text-sm">Prev</button>
+
+          <!-- Page Numbers -->
+          <button class="px-4 py-2 text-sm bg-black text-white rounded-full">
+            1
+          </button>
+          <button
+            class="px-4 py-2 text-sm bg-gray-200 hover:bg-black hover:text-white rounded-full"
+          >
+            2
+          </button>
+          <button
+            class="px-4 py-2 text-sm bg-gray-200 hover:bg-black rounded-full hover:text-white"
+          >
+            3
+          </button>
+
+          <!-- Next Button -->
+          <button class="px-4 py-2 text-sm">Next</button>
+        </div>
+        <!-- Pagination End -->
+      </div>
+    </div>
+    <!-- Profile Dashboard End -->
+    <!-- This is footer section -->
+    <footer class="bg-gray-950 pb-12 md:pb-0 mt-12">
+      <div
+        class="grid container mx-auto px-6 max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-14 md:pt-28 pb-8"
+      >
+        <div class="col-span-1 md:col-span-2 grid grid-cols-2 gap-4">
+          <ul class="text-[12px] md:text-[16px] space-y-1 font-normal text-white">
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >My Account</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Order Status</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Referral</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Coupons</a
+              >
+            </li>
+          </ul>
+          <ul class="text-[12px] md:text-[16px] space-y-1 font-normal text-white">
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >About us</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Help & Support</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Career</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Refund Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Store Buttons -->
+        <div
+          class="flex flex-row md:flex-col items-center md:items-start justify-center md:justify-start md:space-y-2 space-x-2 md:space-x-0"
+        >
+          <a
+            class="bg-[#ff2631] px-4 md:max-w-44 py-3 w-1/2 md:w-[80%] rounded-lg text-white"
+            href="#"
+          >
+            <div class="flex items-center gap-2">
+              <span>
+                <i class="fa-solid text-3xl fa-gamepad"></i>
+              </span>
+              <span>
+                <p class="text-[9px] md:text-[12px]">GET IT ON</p>
+                <span class="font-bold text-[11px] md:text-[14px]"
+                  >Google Play</span
+                >
+              </span>
+            </div>
+          </a>
+          <a
+            class="bg-[#ff2631] px-4 md:max-w-44 py-3 w-1/2 md:w-[80%] rounded-lg text-white"
+            href="#"
+          >
+            <div class="flex items-center gap-2">
+              <span>
+                <i class="fa-solid text-3xl fa-apple-whole"></i>
+              </span>
+              <span>
+                <p class="text-[9px] md:text-[12px]">GET IT ON</p>
+                <span class="font-bold text-[11px] md:text-[14px]"
+                  >Apple Store</span
+                >
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Estimate Subscription -->
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-xl md:text-[16px] mb-2 font-bold text-white">
+            GET TO KNOW PROJECT ESTIMATE?
+          </h3>
+          <input
+            placeholder="Enter email address"
+            class="bg-white px-4 text-[10px] md:text-[14px] mb-2 py-3 md:max-w-72 w-full rounded-lg border-none outline-none"
+            type="email"
+          />
+          <button
+            class="bg-[#ff2631] text-[9px] md:text-[14px] font-bold px-4 py-3 rounded-lg text-white md:max-w-72 w-full"
+          >
+            SUBSCRIBE
+          </button>
+        </div>
+      </div>
+
+      <p
+        class="text-white text-center text-[10px] md:text-[14px] border-gray-400 border-y font-normal py-6 lg:pb-6 pb-16"
+      >
+        Copyright © Amazcart 2025. All rights reserved.
+      </p>
+    </footer>
+    <!-- footer end -->
+    <script>
+      const dashBtn = document.getElementById("dashboardBtn");
+      const dashContent = document.getElementById("dashboardContent");
+
+      dashBtn.addEventListener("click", () => {
+        const isOpen = !dashContent.classList.contains("-translate-x-full");
+
+        if (isOpen) {
+          dashContent.classList.add("-translate-x-full");
+          setTimeout(() => {
+            dashContent.classList.add("hidden");
+          }, 300); // wait for animation
+        } else {
+          dashContent.classList.remove("hidden");
+          setTimeout(() => {
+            dashContent.classList.remove("-translate-x-full");
+          }, 10); // small delay to trigger animation
+        }
+      });
+      const cateBtn = document.getElementById("categoryBtn");
+      const panel = document.getElementById("categoryPanel");
+
+      categoryBtn.addEventListener("click", () => {
+        const isOpen = !categoryPanel.classList.contains("translate-x-full");
+
+        if (isOpen) {
+          // Hide panel
+          categoryPanel.classList.add("translate-x-full");
+          setTimeout(() => {
+            categoryPanel.classList.add("hidden");
+          }, 300); // wait for slide-out
+        } else {
+          // Show panel
+          categoryPanel.classList.remove("hidden", "translate-x-full");
+          categoryPanel.classList.add("translate-x-0");
+        }
+      });
+
+      const openMenu = document.getElementById("menuBtn2");
+      const menupanel = document.getElementById("menuPanel");
+
+      openMenu.addEventListener("click", () => {
+        const isOpen = !menuPanel.classList.contains("-translate-x-full");
+        if (isOpen) {
+          menuPanel.classList.add("-translate-x-full");
+          setTimeout(() => {
+            menuPanel.classList.add("hidden");
+          }, 300);
+        } else {
+          menuPanel.classList.remove("hidden");
+          setTimeout(() => {
+            menuPanel.classList.remove("-translate-x-full");
+          }, 10);
+        }
+      });
+    </script>
+  </body>
+</html>

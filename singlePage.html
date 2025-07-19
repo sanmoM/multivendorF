@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/custom.css" />
+  </head>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+  <body>
+    <!-- header  -->
+    <header>
+      <!-- header 1 -->
+      <div
+        class="lg:flex max-w-7xl mx-auto hidden border-b justify-between font-medium items-center font- py-4 px-4 text-[12px]"
+      >
+        <div class="flex items-center space-x-3 text-gray-700">
+          <a href="#" class="hover:text-[#ff2631] transition duration-200"
+            >PLAY STORE</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a href="#" class="hover:text-[#ff2631] transition duration-200"
+            >APP STORE</a
+          >
+        </div>
+
+        <div class="flex items-center space-x-3 text-gray-700">
+          <a href="#" class="hover:text-[#ff2631] transition duration-200"
+            ><i class="fa-solid fa-truck text-red-600"></i> TRACK YOUR ORDER</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a href="#" class="hover:text-[#ff2631] transition duration-200">
+            <i class="fa-solid fa-code-compare text-red-600"></i>
+            COMPARE (0)</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a
+            href="/my_wishList.html"
+            class="hover:text-[#ff2631] transition duration-200"
+          >
+            <i class="fa-solid fa-heart text-red-600"></i>
+            WISHLIST (0)</a
+          >
+          <span class="h-3 w-px bg-gray-300"></span>
+          <a
+            href="/cartPage.html"
+            class="hover:text-[#ff2631] transition duration-200"
+          >
+            <i class="fa-solid fa-cart-shopping text-red-600"></i>
+            CART (0)</a
+          >
+        </div>
+      </div>
+
+      <div class="py-6 max-w-7xl relative mx-auto w-ful lg:pb-0">
+        <!-- header2  -->
+        <div class="mx-4 relative flex items-center lg:justify-between">
+          <div class="flex items-center justify-center gap-16">
+            <div class="hidden lg:block">
+              <img
+                src="https://amazcart.ischooll.com/public/uploads/settings/65e061ef3822b.png"
+                alt=""
+                class="w-32 md:w-full"
+              />
+            </div>
+          </div>
+
+          <div class="mr-4 md:mr-6 lg:hidden">
+            <button id="menuBtn2">
+              <i class="fa-solid text-3xl fa-bars"></i>
+            </button>
+          </div>
+
+          <div
+            id="menuPanel"
+            class="absolute rounded-md top-16 bg-[#f4f1f7] -left-5 w-1/2 sm:w-[320px] md:w-2/5 lg:hidden shadow-xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+          >
+            <div class="p-4 pl-6 font-bold text-[14px]">
+              <ul class="space-y-2 font-medium">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contacts</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Auction</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="flex mr-8 lg:mr-0 items-center gap-3 w-[400px] border border-gray-200 rounded-full bg-[#f9f9fb] px-4 py-3"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.65 6.65a7.5 7.5 0 010 10.6z"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search your item"
+              class="ml-3 w-full bg-transparent outline-none text-gray-700 placeholder-gray-500"
+            />
+          </div>
+
+          <div class="lg:hidden absolute top-4 right-0 z-50">
+            <i class="fa-solid fa-bell text-xl text-gray-700"></i>
+          </div>
+
+          <div class="text-[14px] hidden lg:block font-medium">
+            <a
+              class="hover:text-[#ff2631] transition duration-200"
+              href="/login.html"
+            >
+              <i class="fa-solid fa-user text-red-600"></i>
+              LOGIN</a
+            ><span class="mx-1">/</span
+            ><a
+              class="hover:text-[#ff2631] transition duration-200"
+              href="/signUp.html"
+              >REGISTER</a
+            >
+          </div>
+        </div>
+        <!-- header3 -->
+        <div class="bg-[#f7f7fc] relative mx-4 mt-6 hidden lg:block pr-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <button
+                id="categoryBtn"
+                class="flex items-center px-4 py-3 bg-black text-white text-sm font-semibold rounded-sm"
+              >
+                <svg
+                  class="w-8 h-6 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+                All Categories
+                <svg
+                  class="w-4 h-6 ml-14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <nav
+                class="flex items-center space-x-6 ml-12 text-[15px] font-medium"
+              >
+                <a
+                  href="/index.html"
+                  class="hover:text-[#ff2631] transition duration-200"
+                  >Home</a
+                >
+                <a
+                  href="/shopPage.html"
+                  class="hover:text-[#ff2631] transition duration-200"
+                  >Shop</a
+                >
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >Blog</a
+                >
+
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >Contacts</a
+                >
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >About Us</a
+                >
+                <a href="#" class="hover:text-[#ff2631] transition duration-200"
+                  >Auction</a
+                >
+              </nav>
+            </div>
+
+            <div class="flex items-center space-x-6 text-[12px] font-medium">
+              <a
+                href="#"
+                class="flex items-center hover:text-[#ff2631] transition duration-200"
+              >
+                <svg
+                  class="w-4 h-4 mr-1 text-[#ff2631]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M18 9v6m3-3h-6M8 7a4 4 0 100 8 4 4 0 000-8zm0 8c-2.21 0-4 1.79-4 4v1h8v-1c0-2.21-1.79-4-4-4z"
+                  />
+                </svg>
+                New User Zone
+              </a>
+
+              <div class="h-5 w-px bg-gray-300"></div>
+
+              <a
+                href="#"
+                class="flex items-center hover:text-[#ff2631] transition duration-200"
+              >
+                <svg
+                  class="w-4 h-4 mr-1 text-[#ff2631]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5l2.12 4.3 4.77.7-3.45 3.36.81 4.73L12 16.6l-4.25 2.2.81-4.73-3.45-3.36 4.77-.7L12 4.5z"
+                  />
+                </svg>
+                Daily Deals
+              </a>
+            </div>
+          </div>
+          <div
+            id="categoryPanel"
+            class="hidden absolute top-12 left-0 w-[320px] h-[90vh] bg-[#f4f1f7] shadow-xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+          >
+            <div class="p-3 border-b">
+              <p>Category content goes here...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <div
+        class="fixed bottom-0 left-0 w-full h-20 bg-[#eeeef1] shadow-[0_-4px_12px_rgba(0,0,0,0.15)] z-40 lg:hidden"
+      >
+        <div
+          class="flex justify-between h-full items-center px-4 py-6 text-black text-xs relative"
+        >
+          <!-- Home -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/index.html"
+              ><i class="fa-solid text-[18px] fa-house"></i
+            ></a>
+            <span class="font-semibold text-base">Home</span>
+          </div>
+
+          <!-- Wishlist -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/my_wishList.html"
+              ><i class="fa-solid text-[18px] fa-heart"></i
+            ></a>
+            <span class="font-semibold text-base">Wishlist</span>
+          </div>
+
+          <!-- Spacer -->
+          <div class="w-16"></div>
+
+          <!-- Cart -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/cartPage.html"
+              ><i class="fa-solid text-[18px] fa-cart-shopping"></i
+            ></a>
+            <span class="font-semibold text-base">Cart</span>
+          </div>
+
+          <!-- Account -->
+          <div class="flex flex-col items-center space-y-1">
+            <a href="/user_profile.html"
+              ><i class="fa-solid text-[18px] fa-user"></i
+            ></a>
+            <span class="font-semibold text-base">Account</span>
+          </div>
+
+          <!-- Floating Button -->
+          <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 z-50">
+            <div
+              class="bg-black shadow-xl flex justify-center items-center text-white font-bold text-4xl h-16 w-16 rounded-full"
+            >
+              e
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- product single page -->
+    <div
+      class="grid container max-w-7xl px-3 mt-6 mx-auto grid-cols-1 lg:grid-cols-4 lg:gap-6"
+    >
+      <!-- Left Section -->
+      <div class="col-span-3">
+        <div class="lg:flex block gap-4">
+          <!-- Product Image -->
+          <div class="lg:w-1/2 w-full">
+            <img
+              src="https://amazcart.ischooll.com/public/uploads/images/02-01-2023/63b2bd78b357d.webp"
+              alt="Product Image"
+              class="w-full max-w-md mx-auto"
+            />
+            <div
+              class="mb-8 gap-2 items-center justify-center flex lg:mb-0 mt-2"
+            >
+              <div
+                class="h-8 w-8 flex justify-center items-center hover:bg-black transition duration-200 hover:text-white border rounded-full"
+              >
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <img
+                src="https://amazcart.ischooll.com/public/uploads/images/02-01-2023/63b2bd78b357d.webp"
+                class="max-w-16 border border-black cursor-pointer rounded"
+                alt=""
+              />
+              <img
+                src="https://amazcart.ischooll.com/public/uploads/images/02-01-2023/63b2bd78b357d.webp"
+                class="max-w-16 cursor-pointer border rounded"
+                alt=""
+              />
+              <img
+                src="https://amazcart.ischooll.com/public/uploads/images/02-01-2023/63b2bd78b357d.webp"
+                class="max-w-16 border cursor-pointer rounded"
+                alt=""
+              />
+              <img
+                src="https://amazcart.ischooll.com/public/uploads/images/02-01-2023/63b2bd78b357d.webp"
+                class="max-w-16 border cursor-pointer rounded"
+                alt=""
+              />
+              <div
+                class="h-8 w-8 flex justify-center items-center hover:bg-black transition duration-200 hover:text-white border rounded-full"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="lg:w-1/2 w-full lg:ml-4">
+            <span
+              class="p-1 text-sm font-semibold text-white bg-green-600 inline-block"
+              >In stock</span
+            >
+            <h2 class="text-[16px] lg:text-[22px] my-2 font-bold">
+              Wooden Design Beautiful Furniture 001
+            </h2>
+
+            <div class="space-y-1">
+              <p class="text-sm text-[#687083]">
+                SKU: <span class="text-black">Wooden-furniture-001</span>
+              </p>
+              <p class="text-sm text-[#687083]">
+                Category:
+                <span class="text-black">Furnitures, Wooden Furniture</span>
+              </p>
+              <p class="text-sm text-[#687083]">
+                AVAILABLITY: <span class="text-black">Unlimited</span>
+              </p>
+            </div>
+
+            <!-- Ratings -->
+            <div class="flex items-center my-3 pb-1 border-b gap-5">
+              <div class="flex items-center gap-3 border-r pr-4">
+                <div class="text-yellow-500">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-[12px] text-[#687083]">0.00/5 (0 Review)</p>
+              </div>
+              <div><i class="fa-solid fa-coins mr-2"></i> 067</div>
+            </div>
+
+            <!-- Price-->
+            <h2 class="text-[16px] lg:text-[24px] font-semibold mt-4">
+              $ 65.00
+            </h2>
+
+            <!-- Quantity -->
+            <div class="flex my-4 gap-3 items-center">
+              <p class="text-sm text-[#687083]">Quantity:</p>
+              <div class="flex border text-center">
+                <p class="py-1 px-3 bg-slate-200 cursor-pointer">-</p>
+                <p class="py-1 px-3">1</p>
+                <p class="py-1 px-3 bg-slate-200 cursor-pointer">+</p>
+              </div>
+            </div>
+
+            <h2
+              class="font-medium text-[16px] border-b pb-4 lg:text-[20px] mt-6"
+            >
+              Total: $ 71.00
+            </h2>
+
+            <div class="my-4">
+              <h3 class="font-medium text-[16px] lg:text-[20px]">
+                Color Variant
+              </h3>
+              <div id="color-options" class="flex mt-1 gap-3">
+                <button
+                  class="color-btn w-8 h-8 rounded-full border-2 border-black bg-yellow-800"
+                  title="Chocolate"
+                ></button>
+                <button
+                  class="color-btn w-8 h-8 rounded-full border-2 border-gray-300 bg-pink-500"
+                  title="Strawberry"
+                ></button>
+                <button
+                  class="color-btn w-8 h-8 rounded-full border-2 border-gray-300 bg-yellow-300"
+                  title="Vanilla"
+                ></button>
+                <button
+                  class="color-btn w-8 h-8 rounded-full border-2 border-gray-300 bg-green-500"
+                  title="Matcha"
+                ></button>
+              </div>
+            </div>
+
+            <div class="my-6">
+              <h3 class="font-medium text-[16px] lg:text-[20px]">
+                Size (Pounds)
+              </h3>
+              <div class="flex text-sm gap-3 mt-1">
+                <button
+                  class="size-btn px-4 py-2 rounded border bg-black text-white"
+                  data-size="1 pound"
+                >
+                  1 Pound
+                </button>
+                <button
+                  class="size-btn px-4 py-2 rounded border border-gray-300 bg-white"
+                  data-size="2 pound"
+                >
+                  2 Pound
+                </button>
+                <button
+                  class="size-btn px-4 py-2 rounded border border-gray-300 bg-white"
+                  data-size="3 pound"
+                >
+                  3 Pound
+                </button>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex gap-4 mt-6">
+              <a
+                class="px-2 py-3 md:py-4 w-1/2 rounded-md flex justify-center bg-black text-white font-medium text-sm"
+                href="#"
+                >Add to Cart</a
+              >
+              <a
+                class="px-2 py-2 md:py-4 w-1/2 rounded-md flex justify-center border border-black text-black font-medium text-sm"
+                href="/checkOutPage.html"
+                >Buy Now</a
+              >
+            </div>
+
+            <!-- Wishlist & Compare -->
+            <div class="text-sm mt-4 font-semibold">
+              <a href="#" class="mr-4"
+                ><i class="fa-solid fa-heart"></i> ADD TO WISHLIST</a
+              >
+              <a href="#"
+                ><i class="fa-solid fa-code-compare"></i> ADD TO COMPARE</a
+              >
+            </div>
+
+            <div class="flex flex-wrap items-center py-4 gap-2">
+              <p class="text-sm text-[#687083]">TAG:</p>
+              <span
+                class="p-1 text-sm rounded bg-slate-300 text-black whitespace-nowrap"
+                >furniture</span
+              >
+              <span
+                class="p-1 text-sm rounded bg-slate-300 text-black whitespace-nowrap"
+                >wooden furniture</span
+              >
+              <span
+                class="p-1 text-sm rounded bg-slate-300 text-black whitespace-nowrap"
+                >beautiful furniture</span
+              >
+              <span
+                class="p-1 text-sm rounded bg-slate-300 text-black whitespace-nowrap"
+                >wooden design beautiful furniture 001</span
+              >
+            </div>
+
+            <!-- Share Icons -->
+            <div class="mt-4">
+              <p class="text-sm mb-1">SHARE ON:</p>
+              <div class="flex gap-4">
+                <a class="border px-4 py-3 flex items-center" href="#"
+                  ><i class="fa-solid fa-tree"></i
+                ></a>
+                <a class="border px-4 py-3 flex items-center" href="#"
+                  ><i class="fa-solid fa-building-columns"></i
+                ></a>
+                <a class="border px-4 py-3 flex items-center" href="#"
+                  ><i class="fa-solid fa-seedling"></i
+                ></a>
+                <a class="border px-4 py-3 flex items-center" href="#"
+                  ><i class="fa-solid fa-globe"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Description -->
+        <div class="border mt-8 py-4">
+          <h2 class="text-[16px] font-semibold border-b pb-4 pl-4">
+            Description
+          </h2>
+          <div class="p-2 md:p-6">
+            <p class="text-sm">
+              Product details of Titanium Almirah - Butterfly - Black
+            </p>
+            <div
+              class="text-[13px] text-[#687083] flex flex-col lg:flex-row gap-4 my-6 px-2"
+            >
+              <ul class="space-y-1 w-full md:w-1/2">
+                <li>Glass feel premium outlook</li>
+                <li>Compact design for space saving trendy solution</li>
+                <li>Separate compartment for Suits keeping</li>
+                <li>Wooden style built design will give you a premium feel</li>
+                <li>Each shelf load capacity is 15kg</li>
+              </ul>
+              <ul class="space-y-1 w-full md:w-1/2">
+                <li>Fade free & easy cleaning</li>
+                <li>No worry of damage during cleaning with water</li>
+                <li>
+                  Security lock for both upper & bottom chamber makes it a
+                  secure storage solution
+                </li>
+                <li>Measurement: L-34.9 inch, W-18.7 inch, H-68.4 inch</li>
+              </ul>
+            </div>
+            <hr />
+            <div>
+              <h3 class="text-[16px] font-semibold my-4 text-gray-500">
+                About Titanium Almirah:
+              </h3>
+              <p class="text-sm">
+                Titanium Almirah is the most sophisticated and premium plastic
+                built Almirah in the world. Its unique built quality and space
+                saving design makes it a perfect fit for our bed room
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="border mt-8 py-4">
+          <h2 class="text-[16px] font-semibold border-b pb-4 px-4">
+            Customer Feedback
+          </h2>
+
+          <div class="p-4 flex flex-col lg:flex-row gap-8">
+            <!-- Left Rating Summary -->
+            <div class="text-center lg:w-1/4">
+              <h2 class="text-[48px] font-bold text-red-500 leading-none">0</h2>
+              <div class="text-yellow-400 text-lg my-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-sm text-[#687083]">0 Verified ratings</p>
+            </div>
+
+            <!-- Right Star Distribution -->
+            <div class="flex-1 space-y-2">
+              <!-- Star row -->
+              <div class="flex items-center gap-3">
+                <div class="w-full h-2 bg-gray-200 rounded-full"></div>
+                <div class="flex text-yellow-400 text-sm gap-1 w-24">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-sm text-[#687083]">0%</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-full h-2 bg-gray-200 rounded-full"></div>
+                <div class="flex text-yellow-400 text-sm gap-1 w-24">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <span class="text-sm text-[#687083]">0%</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-full h-2 bg-gray-200 rounded-full"></div>
+                <div class="flex text-yellow-400 text-sm gap-1 w-24">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <span class="text-sm text-[#687083]">0%</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-full h-2 bg-gray-200 rounded-full"></div>
+                <div class="flex text-yellow-400 text-sm gap-1 w-24">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <span class="text-sm text-[#687083]">0%</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-full h-2 bg-gray-200 rounded-full"></div>
+                <div class="flex text-yellow-400 text-sm gap-1 w-24">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <span class="text-sm text-[#687083]">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rating Filter Buttons -->
+          <div class="flex gap-2 flex-wrap mt-6 px-4">
+            <button
+              class="px-4 py-1 border border-red-500 bg-red-100 text-red-600 text-sm font-semibold rounded"
+            >
+              All
+            </button>
+            <button class="px-4 py-1 border text-sm font-semibold rounded">
+              5 <i class="fa-solid fa-star text-yellow-400 ml-1"></i>
+            </button>
+            <button class="px-4 py-1 border text-sm font-semibold rounded">
+              4 <i class="fa-solid fa-star text-yellow-400 ml-1"></i>
+            </button>
+            <button class="px-4 py-1 border text-sm font-semibold rounded">
+              3 <i class="fa-solid fa-star text-yellow-400 ml-1"></i>
+            </button>
+            <button class="px-4 py-1 border text-sm font-semibold rounded">
+              2 <i class="fa-solid fa-star text-yellow-400 ml-1"></i>
+            </button>
+            <button class="px-4 py-1 border text-sm font-semibold rounded">
+              1 <i class="fa-solid fa-star text-yellow-400 ml-1"></i>
+            </button>
+          </div>
+
+          <!-- No Review Message -->
+          <p class="px-4 py-6 text-sm text-[#687083]">No review found.</p>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="grid-cols-1 mt-8 lg:mt-0 w-full space-y-8">
+        <!-- Delivery Info -->
+        <div class="border">
+          <h2 class="border-b text-[16px] font-semibold p-4">Delivery Info</h2>
+          <div class="p-4">
+            <h3 class="text-[14px] font-semibold">Free Shipping</h3>
+            <p class="text-[13px] text-[#687083] mt-2">
+              Free Shipping on Free Shipping starts from order amount $ 0.00
+            </p>
+          </div>
+        </div>
+
+        <!-- Location Selector -->
+        <div class="border">
+          <h2 class="border-b text-[16px] font-semibold p-4">
+            Choose your Location
+          </h2>
+          <div class="p-4">
+            <div class="space-y-4 w-full max-w-xs">
+              <select
+                class="w-full border border-gray-300 rounded px-4 py-2 text-gray-600 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+              >
+                <option>Dhaka</option>
+                <option>Chattogram</option>
+                <option>Khulna</option>
+                <option>Rajshahi</option>
+              </select>
+              <select
+                class="w-full border border-gray-300 rounded px-4 py-2 text-gray-600 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+              >
+                <option>Panthapath, Dhaka</option>
+                <option>Dhanmondi, Dhaka</option>
+                <option>Uttara, Dhaka</option>
+                <option>Mirpur, Dhaka</option>
+              </select>
+            </div>
+
+            <div class="mt-8 flex gap-2">
+              <i class="fa-solid fa-truck"></i>
+              <div>
+                <h3 class="text-[14px] font-semibold">Door Delivery</h3>
+                <p class="text-[13px] text-[#687083]">
+                  Free shipping available for this product. Delivery time within
+                  5–8 days.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-8 flex gap-2">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h3 class="text-[14px] font-semibold">Pickup Location</h3>
+                <p class="text-[13px] text-[#687083]">
+                  Delivery from pickup location always free of cost. Pickup
+                  address: Panthapath, Dhaka. Country: Bangladesh. State: Dhaka.
+                  City: Dhaka. Postcode: 1200.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Return Policy -->
+        <div class="p-4 border">
+          <div class="flex gap-2">
+            <i class="fa-solid fa-file"></i>
+            <div>
+              <h3 class="text-[14px] font-semibold">Return Policy</h3>
+              <p class="text-[13px] text-[#687083]">
+                Easy Return, Quick Refund.
+                <a class="text-blue-500" href="#">see more</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seller Info -->
+        <div class="border">
+          <h2 class="border-b text-[16px] font-semibold p-4">
+            Seller Information
+          </h2>
+          <div class="p-4">
+            <a class="text-[14px] font-semibold" href="#">Amaz cart</a>
+            <div class="flex justify-between mt-2">
+              <div>
+                <p class="text-[13px] text-[#687083]">
+                  <span class="text-black mr-2">100%</span> Seller Score
+                </p>
+                <p class="text-[13px] text-[#687083]">
+                  <span class="text-black mr-2">1</span> Followers
+                </p>
+              </div>
+              <button class="p-2 text-[12px] font-bold text-white bg-black">
+                FOLLOWED
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer  -->
+    <footer class="bg-gray-950 pb-12 md:pb-0 mt-12">
+      <div
+        class="grid container mx-auto px-6 max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-14 md:pt-28 pb-8"
+      >
+        <div class="col-span-1 md:col-span-2 grid grid-cols-2 gap-4">
+          <ul
+            class="text-[12px] md:text-[16px] space-y-1 font-normal text-white"
+          >
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >My Account</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Order Status</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Referral</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Coupons</a
+              >
+            </li>
+          </ul>
+          <ul
+            class="text-[12px] md:text-[16px] space-y-1 font-normal text-white"
+          >
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >About us</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Help & Support</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Career</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ff2631] transition duration-200" href=""
+                >Refund Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Store Buttons -->
+        <div
+          class="flex flex-row md:flex-col items-center md:items-start justify-center md:justify-start md:space-y-2 space-x-2 md:space-x-0"
+        >
+          <a
+            class="bg-[#ff2631] px-4 md:max-w-44 py-3 w-1/2 md:w-[80%] rounded-lg text-white"
+            href="#"
+          >
+            <div class="flex items-center gap-2">
+              <span>
+                <i class="fa-solid text-3xl fa-gamepad"></i>
+              </span>
+              <span>
+                <p class="text-[9px] md:text-[12px]">GET IT ON</p>
+                <span class="font-bold text-[11px] md:text-[14px]"
+                  >Google Play</span
+                >
+              </span>
+            </div>
+          </a>
+          <a
+            class="bg-[#ff2631] px-4 md:max-w-44 py-3 w-1/2 md:w-[80%] rounded-lg text-white"
+            href="#"
+          >
+            <div class="flex items-center gap-2">
+              <span>
+                <i class="fa-solid text-3xl fa-apple-whole"></i>
+              </span>
+              <span>
+                <p class="text-[9px] md:text-[12px]">GET IT ON</p>
+                <span class="font-bold text-[11px] md:text-[14px]"
+                  >Apple Store</span
+                >
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Estimate Subscription -->
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-xl md:text-[16px] mb-2 font-bold text-white">
+            GET TO KNOW PROJECT ESTIMATE?
+          </h3>
+          <input
+            placeholder="Enter email address"
+            class="bg-white px-4 text-[10px] md:text-[14px] mb-2 py-3 md:max-w-72 w-full rounded-lg border-none outline-none"
+            type="email"
+          />
+          <button
+            class="bg-[#ff2631] text-[9px] md:text-[14px] font-bold px-4 py-3 rounded-lg text-white md:max-w-72 w-full"
+          >
+            SUBSCRIBE
+          </button>
+        </div>
+      </div>
+
+      <p
+        class="text-white text-center text-[10px] md:text-[14px] border-gray-400 border-y font-normal py-6 lg:pb-6 pb-16"
+      >
+        Copyright © Amazcart 2025. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      const cateBtn = document.getElementById("categoryBtn");
+      const panel = document.getElementById("categoryPanel");
+
+      categoryBtn.addEventListener("click", () => {
+        const isOpen = !categoryPanel.classList.contains("translate-x-full");
+
+        if (isOpen) {
+          // Hide panel
+          categoryPanel.classList.add("translate-x-full");
+          setTimeout(() => {
+            categoryPanel.classList.add("hidden");
+          }, 300); // wait for slide-out
+        } else {
+          // Show panel
+          categoryPanel.classList.remove("hidden", "translate-x-full");
+          categoryPanel.classList.add("translate-x-0");
+        }
+      });
+
+      const openMenu = document.getElementById("menuBtn2");
+      const menupanel = document.getElementById("menuPanel");
+
+      openMenu.addEventListener("click", () => {
+        const isOpen = !menuPanel.classList.contains("-translate-x-full");
+        if (isOpen) {
+          menuPanel.classList.add("-translate-x-full");
+          setTimeout(() => {
+            menuPanel.classList.add("hidden");
+          }, 300);
+        } else {
+          menuPanel.classList.remove("hidden");
+          setTimeout(() => {
+            menuPanel.classList.remove("-translate-x-full");
+          }, 10);
+        }
+      });
+
+      // for color
+      const colorButtons = document.querySelectorAll(".color-btn");
+      colorButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const active = document.querySelector(".color-btn.border-black");
+          if (active) {
+            console.log(e.target);
+            active.classList.remove("border-black");
+            active.classList.add("border-gray-300");
+          }
+          if (active != e.target) {
+            btn.classList.remove("border-gray-300");
+            btn.classList.add("border-black");
+          }
+        });
+      });
+
+      // for size
+      const sizeBtn = document.querySelectorAll(".size-btn");
+      sizeBtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const active = document.querySelector(".size-btn.bg-black");
+          if (active) {
+            active.classList.remove("bg-black", "text-white");
+            active.classList.add("bg-white", "text-black");
+          }
+          btn.classList.remove("bg-white", "text-black");
+          btn.classList.add("bg-black", "text-white");
+        });
+      });
+    </script>
+  </body>
+</html>

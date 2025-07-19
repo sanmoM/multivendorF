@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn {
+    @apply outline-none 
+}
+
+.text-hover {
+    @apply bg-blue-700
+}

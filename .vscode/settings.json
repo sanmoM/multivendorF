@@ -1,0 +1,10 @@
+{
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on"
+  },
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": true,
+  "files.autoSaveWhenNoErrors": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
